@@ -1,3 +1,12 @@
 <?php
-header('location: 1.php');
-exit();
+
+$url =  $_SERVER['REQUEST_URI'];
+
+
+switch ($url){
+    case 'login': $filename = 'login.php';
+    // TODO 404 - default:
+}
+
+// TODO always initialize $filename
+require $filename;
