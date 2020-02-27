@@ -1,6 +1,7 @@
 RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule ^(.*(?!\.(php|phtml)))$ $1 [L,QSA]
+RewriteCond %{REQUEST_URI} -f
+RewriteCond %{REQUEST_URI} !\.(php|phtml)$
+RewriteRule ^(.*)$ $1 [L,QSA]
 
 RewriteRule ^(.*)$ index.php [L,QSA]
